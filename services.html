@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <title>Goliath - Services</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/nav-styles.css"> 
+  <link rel="stylesheet" href="css/contactform.css">
+  <link rel="stylesheet" href="css/responsive.css"> 
+  <link rel="stylesheet" href="css/animate.min.css">
+   
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md fixed-top navbar-light js-change">
+    <a class="navbar-brand"  href="index.html"><img src="img/logo.png" width="70%" alt="" class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms"></a>
+    <button class="navbar-toggler" onclick="openNav()" type="button"  aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    
+    </button>
+
+
+
+    <div class="collapse navbar-collapse" id="navbarsExample04">
+       <ul class="navbar-nav z-navbar-nav ml-auto ">
+            <li class="nav-item z-nav-item ">
+              <a href="index.html" class="nav-link wow animate__animated animate__fadeInDown " data-wow-delay="100ms"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item z-nav-item ">
+              <a href="about.html" class="nav-link scroll-link wow animate__animated animate__fadeInDown " data-wow-delay="300ms">About</a>
+            </li>
+            <li class="nav-item z-nav-item active">
+              <a href="services.html" class="nav-link scroll-link wow animate__animated animate__fadeInDown " data-wow-delay="500ms">Services</a>
+            </li>
+            <li class="nav-item z-nav-item">
+              <a style="color: #0B3954;" data-toggle="modal" data-target="#exampleModalCenter" class="nav-link scroll-link wow animate__animated animate__fadeInDown " data-wow-delay="700ms">Contact Us</a>
+            </li>
+           
+          </ul>
+  
+    </div>
+  </nav>
+  
+  
+  <!-- CONTENT FOR MENU -->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a style="color: #0B3954;" data-toggle="modal" data-target="#exampleModalCenter">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- CONTACT FORM -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title heading3" id="exampleModalLongTitle">Goliath Operation Online</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+          <form class="shake contact__form" role="form" method="post" action="contact.php" id="contactForm" name="contact-form" data-toggle="validator">
+             <!-- form message -->
+                              <div class="row">
+                                  <div class="col-12">
+                                      <div class="contact__msg" style="display: none">
+                                          <p>Your message was sent successfully.</p>
+                                      </div>
+                                  </div>
+                              </div>
+            <!-- end message -->
+
+            <!-- Name -->
+            <div class="form-group label-floating">
+              <label class="control-label" for="name">Name</label>
+              <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+              <div class="help-block with-errors"></div>
+            </div>
+            <!-- email -->
+            <div class="form-group label-floating">
+              <label class="control-label" for="email">Email</label>
+              <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
+              <div class="help-block with-errors"></div>
+            </div>
+            <!-- Subject -->
+            <div class="form-group label-floating">
+              <label class="control-label">Subject</label>
+              <input class="form-control" id="subject" type="text" name="subject" required data-error="Please enter your subject">
+              <div class="help-block with-errors"></div>
+            </div>
+            <!-- Message -->
+            <div class="form-group label-floating">
+                <label for="message" class="control-label">Message</label>
+                <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                <div class="help-block with-errors"></div>
+            </div>
+                         <!--VALIDATION Captcha Code-->
+
+                         <div class="col-lg-6 pl-0">
+                          <div class="form-group mt-20 cstm-group">
+            
+                              <img class="img-fluid" src="verification.php/rand=<?php echo rand(); ?>" id="captcha_image" style="width:26%; border-radius:10px; height: 45px; ">
+                              <p style="line-height:1.4; font-size: 13px;margin-top:10px;margin-left:25px; color: #000;">Can't read the image? <br> <a href="javascript: refreshCaptcha();" style="color:#000;text-decoration: underline;">click here</a> to refresh</p>
+            
+                          </div>
+                      </div>
+                      <div class="col-lg-12 pl-0 pr-0">
+                        <div class="form-group mt-20" style="padding-top: 0px">
+                            <div class="comment-form__input-box" style="width:100%;">
+                                <input type="text" name="captchacode" placeholder="Security Check" id="validation-code" style="width: 100%;" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+            <div class="modal-footer border-0">
+          <!-- Submit button -->
+            <button type="submit" class="btn btn--gradient hvr-fade mb-4 pl-5 pr-5">Send</button>
+        </div>
+        </form>
+       
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<!-- *************************************************************************
+HEADER - SERVICES
+********************************************************************************-->
+<section class="header-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <img class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms"  src="img/logo-o.png" alt="" srcset="" style="margin: auto;">
+          <h3 class="heading2 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Our Services</h3>
+        </div>
+   
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- *************************************************************************
+SECTION 2 - SERVICES
+********************************************************************************-->
+<section class="section-services section2 section2-about section2-services bg-gradient ">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-12 about-center">
+            
+            <p class="text-white wow animate__animated animate__fadeInDown text-center pt-3" data-wow-delay="100ms">
+              We offer many services related to the Human Resource and Project Management domain. Our services cater to the requirements of organisations today and help create a plan for the future. 
+            </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- *************************************************************************
+SECTION 3 - SERVICES
+********************************************************************************-->
+<section class="section section3 section3-services">
+    <div class="container">
+     <div class="text-center">   
+      <h2 class="heading2 mt-3 mb-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">HR Services</h2>
+      <p class=" wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Goliath will work to help both small and large organisations in their quest to maintain smooth HR operations. Goliath will cover all your business's needs, from helping to streamline HR processes for large organisations to providing small business owners with the immediate administration and managerial relief they need. </p>
+    </div>
+
+      <div class="row section-padding ">
+        <div class="col-12 col-md-6 col-lg-6 section3-paddingBottom">
+            
+            <div class="section3-content d-flex  justify-content-sm-center justify-content-md-start flex-column flex-xs-column flex-sm-column  flex-md-row flex-lg-row mb-5">
+                <img src="img/policies.png" width="15%" alt="" class="wow animate__animated animate__fadeIn m-0" data-wow-delay="300ms">
+                <h3 class="heading3 pl-5 wow animate__animated animate__fadeInDown d-flex align-items-end" data-wow-delay="100ms">HR Policies</h3>
+            </div>
+            <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Goliath will optimise HR processes by devising policies for the employee handbook and setting guidelines for employee conduct in the workplace. We work as a fully functional branch of the HR department for organisations looking to manage employees while motivating them to focus on the business's short and long term goals. </p>
+            
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 section3-paddingBottom">
+            <div class="section3-content d-flex  justify-content-sm-center justify-content-md-start flex-column flex-xs-column flex-sm-column  flex-md-row flex-lg-row mb-5">
+                <img src="img/consultancy.png" width="15%" alt="" class="wow animate__animated animate__fadeIn m-0" data-wow-delay="300ms">
+                <h3 class="heading3 pl-5 wow animate__animated animate__fadeInDown d-flex align-items-end" data-wow-delay="100ms">HR Consultancy</h3>
+            </div>
+            <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Our Consultants have years of experience and know-how in developing HR strategies that align with your business objectives, delivering value to your company by discovering cost-cutting and process-simplification opportunities. </p>
+            <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">We use our years of experience, industry expertise, and a client-centric approach to provide relevant, practical, and cost-effective solutions to our client's challenges, including HR and organisational strategy needs. </p>
+            <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Our HR consultancy services afford clients the luxury of focusing their attention on other revenue-generation initiatives while maintaining the trust and confidence of their employees through our flawless HR management services.</p>
+            
+        </div>
+      </div>
+  
+      <div class="vertical-line"></div>
+    </div>
+  </section>
+  
+
+
+<!-- *************************************************************************
+SECTION 4 - SERVICES
+********************************************************************************-->
+<section class="section section3 section3-services">
+    <div class="container">
+     <div class="text-center">   
+      <h2 class="heading2 mt-3 mb-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Project Management Services</h2>
+    </div>
+
+      <div class="row section-padding ">
+        <div class="col-12 col-md-6 col-lg-6 section3-paddingBottom">
+ 
+            <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">To evolve and build your business, you must invest in its infrastructure, and the best method to do it is through well-defined projects. Such projects can get complicated, but working with a firm with a team of seasoned, highly skilled, and experienced outsourced Project Management experts who will ensure that your project is completed on time, on budget, and according to specifications can help limit that risk. </p>
+
+            <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">At Goliath, our Project Management experts facilitate completing your projects when you struggle to maintain an appropriate level of in-house personnel.</p>
+
+            <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">We believe that game-changing Project Management support services are at the heart of any successful organisation, and Goliath provides unique and customised Project Management services to ensure that your projects operate smoothly.</p>
+           
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 section3-paddingBottom">
+            
+            <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Our project managers go beyond their typical roles to plan, organise, lead, and control your project through the lifecycle. </p>
+            <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Some of the other roles performed by the project manager include:</p>
+            
+            <div class="z-bullet-list">
+                <ul >
+                  <li class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Assigning qualified specialists to different roles</li>
+                  <li class="wow animate__animated animate__fadeInDown " data-wow-delay="200ms">Defining and formulating goals</li>
+                  <li class="wow animate__animated animate__fadeInDown " data-wow-delay="300ms">Setting a communication plan with the customer</li>
+                  <li class="wow animate__animated animate__fadeInDown " data-wow-delay="400ms">Defining areas of responsibility</li>
+                  <li class="wow animate__animated animate__fadeInDown " data-wow-delay="500ms">Attending to contracts and agreements</li>
+                  <li class="wow animate__animated animate__fadeInDown " data-wow-delay="600ms">Constant communication with the team</li>
+                  <li class="wow animate__animated animate__fadeInDown " data-wow-delay="700ms">Tracking the project status</li>
+                  <li class="wow animate__animated animate__fadeInDown " data-wow-delay="700ms">Attending to all needs of the team and project</li>
+
+                </ul>
+            </div>
+        </div>
+        
+        <!-- <div class="card section3-card wow animate__animated animate__fadeInDown " data-wow-delay="100ms">
+            <div class="card-body">
+                <p >We broaden the definition of project management, extend the horizons and give you a service that benefits you in the long run. </p> 
+        
+              </div>
+        </div> -->
+      </div>
+  
+      <div class="vertical-line"></div>
+    </div>
+  </section>
+
+
+
+
+
+ 
+<!-- *************************************************************************
+SECTION 5 - SERVICES
+********************************************************************************-->
+<section class="section section3 section3-services">
+    <div class="container">
+     <div class="text-center">   
+      <h2 class="heading2 mt-3 mb-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Why Do You Need a Professional Project Manager? </h2>
+    </div>
+
+      <div class="row section-padding ">
+        <div class="col-12 col-md-6 col-lg-6 section3-paddingBottom">
+            
+            <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">You can't best utilise all of the developers, analysts, testers and engineers working in your team if there isn't a project manager leading their efforts. Communication is crucial for a successful project, and project managers act as a conduit for effective collaboration through their presence and guidance. </p>
+           
+            <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Our Project Managers have the following necessary skills to see your project to completion such as:</p>
+            <div class="z-bullet-list">
+                <ul >
+                  <li class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Team Lead</li>
+                  <li class="wow animate__animated animate__fadeInDown " data-wow-delay="200ms">Product Owner</li>
+                  <li class="wow animate__animated animate__fadeInDown " data-wow-delay="300ms">Scrum Master</li>
+                  <li class="wow animate__animated animate__fadeInDown " data-wow-delay="400ms">Project Coordinator</li>
+                  <li class="wow animate__animated animate__fadeInDown " data-wow-delay="500ms">Delivery Manager</li>
+                  
+                  
+                </ul>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 section3-paddingBottom">
+            
+            <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">We have experts who can help your business transform faster by providing Project Management services that make it simple to manage and maintain your organisational infrastructure and work environment. They take care of the support layers and remove the hassle of operations from the user's end, reducing the requirement to hire staff regularly to monitor it. </p>
+            <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">We develop KPIs with our clients and base our Project Management services on them. We also provide ongoing consulting services as needed throughout the project, gradually introduce process improvements, monitor and analyse their success, and make adjustments as needed.</p>
+           
+        </div>
+      </div>
+  
+      <div class="vertical-line"></div>
+    </div>
+  </section> 
+
+<!-- *************************************************************************
+SECTION 6 - SERVICES
+********************************************************************************-->
+<section class="section section3 section3-services">
+    <div class="container">
+     <div class="text-center">   
+      <h2 class="heading2 mt-3 mb-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Project Scheduling from Start to Finish</h2>
+     
+    
+    </div>
+
+      <div class="row section-padding ">
+        
+        <h3 class=" heading4 wow animate__animated animate__fadeInDown text-center" data-wow-delay="100ms">We collaborate closely with project teams to plan operations from the start of the project through its completion. Our teams monitor the following requirements:</h3>
+         
+
+        <div class="col-12 col-md-12 col-lg-4 section3-paddingBottom">
+            
+           <img src="img/confimation.png" width="25%" alt="" class="mt-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">
+           <h3 class="heading4 mt-3 wow animate__animated animate__fadeInDown mb-5 text-center" data-wow-delay="100ms">Confirm Project Activities</h3>
+            <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">We begin by assisting clients in comprehending the extent of the job. The project scope can assist organisations in their operations and provide a thorough action plan for the future. The project scope might also specify a series of actions and goals that must be met.</p>
+            
+            <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Throughout the process, our staff at Goliath is in close communication with stakeholders to ensure that the goals are met. 
+            </p>
+            
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-4 section3-paddingBottom">
+            
+            <img src="img/determined.png" width="25%" alt="" class="mt-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">
+            <h3 class="heading4 mt-3 wow animate__animated animate__fadeInDown mb-5 text-center" data-wow-delay="100ms">Determining Dependencies </h3>
+             <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">We establish dependencies during the project scheduling process and identify interrelated tasks. Identifying dependencies has saved valuable time for our clients and helped us finish projects on time or earlier than expected.</p>
+             
+         </div>
+        
+
+         <div class="col-12 col-md-12 col-lg-4 section3-paddingBottom">
+            
+            <img src="img/set duration.png" width="25%" alt="" class="mt-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">
+            <h3 class="heading4 mt-3 wow animate__animated animate__fadeInDown mb-5 text-center" data-wow-delay="100ms">Set Duration</h3>
+             <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">We create a project schedule timeline with a well-defined start and end date. The timeline is set as per the client's expectations from us, and it paves a realistic plan for the future. The time allocated to each task is laid out for teams to follow so that monitoring and controlling can become more manageable.</p>
+             
+         </div>
+
+      </div>
+  
+      <div class="vertical-line"></div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+<!-- *************************************************************************
+CONTACT
+********************************************************************************-->
+<section class="section section4">
+    <div class="container">
+      <h2 class="heading2 mt-3 mb-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Contact Us</h2>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-6">
+                  <!-- contact form -->
+                  <div class="wow animated fadeInRight pt-5 pt-md-0" data-wow-delay=".2s">
+                    <form class="shake contact__form" role="form" method="post" action="contact.php" id="contactForm" name="contact-form" data-toggle="validator">
+                        <!-- Name -->
+                        <div class="form-group label-floating">
+                          <label class="control-label" for="name">Name</label>
+                          <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- email -->
+                        <div class="form-group label-floating">
+                          <label class="control-label" for="email">Email</label>
+                          <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                         <!-- Subject -->
+                        <div class="form-group label-floating">
+                          <label class="control-label">Subject</label>
+                          <input class="form-control" id="subject" type="text" name="subject" required data-error="Please enter your subject">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Message -->
+                        <div class="form-group label-floating">
+                            <label for="message" class="control-label">Message</label>
+                            <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                                                 <!--VALIDATION Captcha Code-->
+
+                      <div class="col-lg-6 pl-0">
+                        <div class="form-group mt-20 cstm-group">
+          
+                            <img class="img-fluid" src="verification.php/rand=<?php echo rand(); ?>" id="captcha_image" style="width:26%; border-radius:10px; height: 45px; ">
+                            <p style="line-height:1.4; font-size: 13px;margin-top:10px;margin-left:25px; color: #000;">Can't read the image? <br> <a href="javascript: refreshCaptcha();" style="color:#000;text-decoration: underline;">click here</a> to refresh</p>
+          
+                        </div>
+                    </div>
+                    <div class="col-lg-12 pl-0 pr-0">
+                      <div class="form-group mt-20" style="padding-top: 0px">
+                          <div class="comment-form__input-box" style="width:100%;">
+                              <input type="text" name="captchacode" placeholder="Security Check" id="validation-code" style="width: 100%;" class="form-control">
+                          </div>
+                      </div>
+                  </div>
+                        <div class="form-submit mt-5">
+                            <button class="btn btn--gradient hvr-fade mt-3" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> Send Message</button>
+                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 ">
+            <img src="img/logo.png" alt="" class="section-padding mx-auto wow animate__animated animate__fadeIn " data-wow-delay="100ms">
+            <div class="contact-p-container">
+             <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Contact us today for all your Project Management and HR needs</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  <!-- *************************************************************************
+  FOOTER
+  ********************************************************************************-->
+  <footer class="footer ">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div  class=" mt-5 footer-link ">
+          <ul class="navbar-nav z-navbar-nav d-flex flex-row justify-content-center justify-content-sm-center justify-content-lg-end text-light">
+            <li class="nav-item z-nav-item "><a href="index.html" class="nav-link text-light">Home <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item z-nav-item "><a href="about.html" class="nav-link text-light scroll-link">About</a></li>
+            <li class="nav-item z-nav-item "><a href="services.html" class="nav-link text-light scroll-link" >Services</a></li>
+            <li class="nav-item z-nav-item "><a  class="nav-link text-light scroll-link" data-toggle="modal" data-target="#exampleModalCenter">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <img src="img/logo-w2.png" alt="">
+      </div>
+      <div class="row d-flex justify-content-center"><p class="text-light pb-3">Copyright 2022. All Rights Reserved</p></div>
+    </div>
+  </footer>
+  
+  
+  
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+  
+    
+    </script>
+  </body>
+  </html>

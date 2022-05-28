@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <title>Goliath - Home</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/nav-styles.css"> 
+  <link rel="stylesheet" href="css/contactform.css">
+  <link rel="stylesheet" href="css/responsive.css"> 
+  <link rel="stylesheet" href="css/animate.min.css">
+   
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md fixed-top navbar-light js-change">
+    <a class="navbar-brand"  href="index.html"><img src="img/logo.png" width="70%" alt="" class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms"></a>
+    <button class="navbar-toggler" onclick="openNav()" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    
+    </button>
+
+
+
+    <div class="collapse navbar-collapse" id="navbarsExample04">
+       <ul class="navbar-nav z-navbar-nav ml-auto ">
+            <li class="nav-item z-nav-item active">
+              <a href="index.html" class="nav-link wow animate__animated animate__fadeInDown " data-wow-delay="100ms"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item z-nav-item">
+              <a href="about.html" class="nav-link scroll-link wow animate__animated animate__fadeInDown " data-wow-delay="300ms">About</a>
+            </li>
+            <li class="nav-item z-nav-item">
+              <a href="services.html" class="nav-link scroll-link wow animate__animated animate__fadeInDown " data-wow-delay="500ms">Services</a>
+            </li>
+            <li class="nav-item z-nav-item">
+              <a style="color: #0B3954;" data-toggle="modal" data-target="#exampleModalCenter" class="nav-link scroll-link wow animate__animated animate__fadeInDown " data-wow-delay="700ms">Contact Us</a>
+            </li>
+           
+          </ul>
+  
+    </div>
+  </nav>
+  
+  
+  <!-- CONTENT FOR MENU -->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a style="color: #0B3954;" data-toggle="modal" data-target="#exampleModalCenter">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- CONTACT FORM -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title heading3" id="exampleModalLongTitle">Goliath Operation Online</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+          <form class="shake contact__form" role="form" method="post" action="contact.php" id="contactForm" name="contact-form" data-toggle="validator">
+             <!-- form message -->
+                              <div class="row">
+                                  <div class="col-12">
+                                      <div class="contact__msg" style="display: none">
+                                          <p>Your message was sent successfully.</p>
+                                      </div>
+                                  </div>
+                              </div>
+            <!-- end message -->
+
+            <!-- Name -->
+            <div class="form-group label-floating">
+              <label class="control-label" for="name">Name</label>
+              <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+              <div class="help-block with-errors"></div>
+            </div>
+            <!-- email -->
+            <div class="form-group label-floating">
+              <label class="control-label" for="email">Email</label>
+              <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
+              <div class="help-block with-errors"></div>
+            </div>
+            <!-- Subject -->
+            <div class="form-group label-floating">
+              <label class="control-label">Subject</label>
+              <input class="form-control" id="subject" type="text" name="subject" required data-error="Please enter your subject">
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group label-floating">
+                <label for="message" class="control-label">Message</label>
+                <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                <div class="help-block with-errors"></div>
+            </div>
+
+                         <!--VALIDATION Captcha Code-->
+
+                      <div class="col-lg-6 pl-0">
+                          <div class="form-group mt-20 cstm-group">
+            
+                              <img class="img-fluid" src="verification.php/rand=<?php echo rand(); ?>" id="captcha_image" style="width:26%; border-radius:10px; height: 45px; ">
+                              <p style="line-height:1.4; font-size: 13px;margin-top:10px;margin-left:25px; color: #000;">Can't read the image? <br> <a href="javascript: refreshCaptcha();" style="color:#000;text-decoration: underline;">click here</a> to refresh</p>
+            
+                          </div>
+                      </div>
+                      <div class="col-lg-12 pl-0 pr-0">
+                        <div class="form-group mt-20" style="padding-top: 0px">
+                            <div class="comment-form__input-box" style="width:100%;">
+                                <input type="text" name="captchacode" placeholder="Security Check" id="validation-code" style="width: 100%;" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+            <div class="modal-footer border-0">
+          <!-- Submit button -->
+            <button type="submit" class="btn btn--gradient hvr-fade mb-4 pl-5 pr-5">Send</button>
+        </div>
+        </form>
+       
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<!-- *************************************************************************
+HEADER
+********************************************************************************-->
+<section class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-6">
+        <h1 class="heading1 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Goliath</h1>
+        <p class="mt-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Goliath's mission is to be the leading provider of HR and Project Management services available on the web. Our goal is to help organisations work more efficiently in these domains through our expertise and commitment.</p>
+        <button class="btn btn--gradient hvr-fade mt-3 wow animate__animated animate__fadeInDown " data-wow-delay="100ms" data-toggle="modal" data-target="#exampleModalCenter"><span>Let's Get Started</span></button>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6 d-none d-md-block">
+          <img src="img/header.png" alt="" class="wow animate__animated animate__fadeIn " data-wow-delay="300ms">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- *************************************************************************
+SECTION 2
+********************************************************************************-->
+<section class="section section2 bg-gradient">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-6 center">
+          <img src="img/logo-w.png" alt="" class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 ">
+            <p class="text-white wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Goliath is a provider of business operations services that helps streamline the handling of complex, everyday tasks for our clients. Our expertise enables us to alleviate the burden of managing time-consuming areas of your business to optimise performance and productivity. We assist clients by providing detailed guidance in Project Management and HR operations. </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<!-- *************************************************************************
+SECTION 3
+********************************************************************************-->
+<section class="section section3">
+  <div class="container">
+
+    <h2 class="heading2 mt-3 mb-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">How We Help</h2>
+
+   
+    <div class="row section-padding">
+      <div class="col-12 col-md-6 col-lg-6 center">
+        <img src="img/reduce.png" alt="" class="wow animate__animated animate__fadeIn " data-wow-delay="100ms">
+      </div>
+      <div class="col-12 col-md-6 col-lg-6 ">
+          <h3 class="heading3 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Reduce the HR Burden </h3>
+          <div class="vertical-line wow animate__animated animate__fadeIn " data-wow-delay="300ms"></div>
+          <p class="mt-5 wow animate__animated animate__fadeIn " data-wow-delay="300ms">Goliath has extensive expertise working within an organisation's mission and culture and knowledge of workplace regulations and procedures, people management systems, and labour contracts. This knowledge and insight results in customised HR solutions that outsource critical HR functions to experts, help a company fulfil its strategic objectives and enable a high-performance workplace culture. We work with both high- and low-performing teams to assess current challenges and devise the most influential HR strategy aligned with the organisation's overall objectives.</p>
+      </div>
+    </div>
+
+    
+
+    <div class="row section-padding">
+      <div class="col-12 col-md-6 col-lg-6 center order-1 order-sm-1 order-md-2 order-lg-2 order-xl-2">
+        <img src="img/benefits.png" alt="" class="wow animate__animated animate__fadeIn " data-wow-delay="100ms">
+      </div>
+      <div class="col-12 col-md-6 col-lg-6 order-2 order-sm-2 order-md-1 order-lg-1 order-xl-1">
+          <h3 class="heading3 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Add to the Benefits Structure </h3>
+          <div class="vertical-line wow animate__animated animate__fadeIn" data-wow-delay="300ms"></div>
+          <p class="mt-5 wow animate__animated animate__fadeIn " data-wow-delay="300ms">Employee benefits are crucial to the success of any organisation. It is important to evaluate and invest in a strong employee benefits program to create a positive and healthy working environment. In today's extremely competitive job market, attracting and retaining the highest quality talent is vital. </p>
+      </div>
+    </div>
+
+
+    <div class="row section-padding">
+      <div class="col-12 col-md-6 col-lg-6 center">
+        <img src="img/taking_control.png" alt="" class="wow animate__animated animate__fadeIn " data-wow-delay="100ms">
+      </div>
+      <div class="col-12 col-md-6 col-lg-6 ">
+          <h3 class="heading3 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Taking Control of the Project Management Process </h3>
+          <div class="vertical-line wow animate__animated animate__fadeIn " data-wow-delay="300ms"></div>
+          <p class="mt-5 wow animate__animated animate__fadeIn " data-wow-delay="300ms">We implement the Goliath ideology to improve operations and provide all organisations with a guide for budgeting, planning, overseeing and closing projects. </p>
+          <p class="mt-5 wow animate__animated animate__fadeIn " data-wow-delay="300ms">We work with our clients to understand their business goals and objectives. Then we use our global effectiveness model, assessment methodology, and HR strategy consulting skills to determine where investments are needed to achieve the desired outcomes.</p>
+          <p class="mt-5 wow animate__animated animate__fadeIn " data-wow-delay="300ms">Our strategic process is highly interactive and educational, allowing clients to grasp the predictable complexities of the global workforce and make the best HR decisions possible to support their business strategy.</p>
+      </div>
+    </div>
+
+    <div class="row section-padding">
+      <div class="col-12 col-md-6 col-lg-6 center order-1 order-sm-1 order-md-2 order-lg-2 order-xl-2">
+        <img src="img/comliance.png" alt="" class="wow animate__animated animate__fadeIn " data-wow-delay="100ms">
+      </div>
+      <div class="col-12 col-md-6 col-lg-6 order-2 order-sm-2 order-md-1 order-lg-1 order-xl-1">
+          <h3 class="heading3 wow animate__animated animate__fadeInDown " data-wow-delay="300ms">Compliance Structure </h3>
+          <div class="vertical-line wow animate__animated animate__fadeIn " data-wow-delay="300ms"></div>
+          <p class="mt-5 wow animate__animated animate__fadeIn " data-wow-delay="300ms">Compliance is one of the core areas of responsibility coming under HR departments today. HR departments need to ensure that they remain compliant with all ongoing changes and are updated with the rules and policies of governments and organisations. Many HR departments find it challenging to keep track of all rules and regulations governing the use of data and other processes. Goliath can help ensure that you are compliant and save your business from unnecessary legal hassles.</p>
+      </div>
+    </div>
+    <div class="vertical-line"></div>
+  </div>
+</section>
+
+
+<!-- *************************************************************************
+CONTACT
+********************************************************************************-->
+<section class="section section4">
+  <div class="container">
+    <h2 class="heading2 mt-3 mb-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Contact Us</h2>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-6">
+                <!-- contact form -->
+                <div class="wow animated fadeInRight pt-5 pt-md-0" data-wow-delay=".2s">
+                  <form class="shake contact__form" role="form" method="post" action="contact.php" id="contactForm" name="contact-form" data-toggle="validator">
+                      <!-- Name -->
+                      <div class="form-group label-floating">
+                        <label class="control-label" for="name">Name</label>
+                        <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <!-- email -->
+                      <div class="form-group label-floating">
+                        <label class="control-label" for="email">Email</label>
+                        <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                       <!-- Subject -->
+                      <div class="form-group label-floating">
+                        <label class="control-label">Subject</label>
+                        <input class="form-control" id="subject" type="text" name="subject" required data-error="Please enter your subject">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <!-- Message -->
+                      <div class="form-group label-floating">
+                          <label for="message" class="control-label">Message</label>
+                          <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                          <div class="help-block with-errors"></div>
+                      </div>
+                                               <!--VALIDATION Captcha Code-->
+
+                                               <div class="col-lg-6 pl-0">
+                                                <div class="form-group mt-20 cstm-group">
+                                  
+                                                    <img class="img-fluid" src="verification.php/rand=<?php echo rand(); ?>" id="captcha_image" style="width:26%; border-radius:10px; height: 45px; ">
+                                                    <p style="line-height:1.4; font-size: 13px;margin-top:10px;margin-left:25px; color: #000;">Can't read the image? <br> <a href="javascript: refreshCaptcha();" style="color:#000;text-decoration: underline;">click here</a> to refresh</p>
+                                  
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 pl-0 pr-0">
+                                              <div class="form-group mt-20" style="padding-top: 0px">
+                                                  <div class="comment-form__input-box" style="width:100%;">
+                                                      <input type="text" name="captchacode" placeholder="Security Check" id="validation-code" style="width: 100%;" class="form-control">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          
+                      <div class="form-submit mt-5">
+                          <button class="btn btn--gradient hvr-fade mt-3" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> Send Message</button>
+                          <div id="msgSubmit" class="h3 text-center hidden"></div>
+                          <div class="clearfix"></div>
+                      </div>
+                  </form>
+              </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6 ">
+          <img src="img/logo.png" alt="" class="section-padding mx-auto wow animate__animated animate__fadeIn " data-wow-delay="100ms">
+          <div class="contact-p-container">
+           <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">We help set timelines, distribute resources, and provide a defined guide for the future. Partner with us so we can improve your Project Management processes and HR operations</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- *************************************************************************
+FOOTER
+********************************************************************************-->
+<footer class="footer ">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div  class=" mt-5 footer-link ">
+        <ul class="navbar-nav z-navbar-nav d-flex flex-row justify-content-center justify-content-sm-center justify-content-lg-end text-light">
+          <li class="nav-item z-nav-item "><a href="index.html" class="nav-link text-light">Home <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item z-nav-item "><a href="about.html" class="nav-link text-light scroll-link">About</a></li>
+          <li class="nav-item z-nav-item "><a href="services.html" class="nav-link text-light scroll-link" >Services</a></li>
+          <li class="nav-item z-nav-item "><a  class="nav-link text-light scroll-link" data-toggle="modal" data-target="#exampleModalCenter">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <img src="img/logo-w2.png" alt="">
+    </div>
+    <div class="row d-flex justify-content-center"><p class="text-light pb-3">Copyright 2022. All Rights Reserved</p></div>
+  </div>
+</footer>
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/main.js"></script>
+<script>
+  function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+  }
+
+  
+  </script>
+</body>
+</html>

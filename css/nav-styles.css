@@ -1,0 +1,196 @@
+
+/* W3SCHOLL NAV STYLE */
+
+.onscroll-bg{
+  background-color: var(--white) !important; /*change your desire bg color on onscroll*/
+  transition: all 0.5s ease;
+}
+
+.transition{
+  transition: all 0.9s ease;
+
+}
+
+.js-change a img{
+float: right;
+
+}
+
+.js-change div ul{
+padding-right: 117px;
+}
+
+.onscroll-bg a img{
+  float: left;
+}
+
+.onscroll-bg div ul{
+
+    padding-right: 0px;
+
+}
+
+
+.z-navbar-nav li{
+  margin: 0 8px;
+  /*transition: border-bottom .5s;*/
+}
+
+.z-nav-item::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: var(--prussianBlue) !important;
+  transition: width .3s;
+}
+
+.z-nav-item:hover::after{
+  
+     width: 100%;
+}
+
+.z-nav-item.active::after{
+  
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--white);
+  transition: width .3s;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1040;
+    top: 0;
+    left: 0;
+    background-color: var(--copperCrayola);
+    background: linear-gradient(270deg, rgba(230, 134, 93, 1) 0%, rgba(251,173,66,1) 100%);
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: var(--white) !important;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: var(--prussianBlue) !important;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+
+     /*Nav*/
+  .js-change a img{
+float: left;
+
+}
+
+.js-change div ul{
+padding-right: 0px;
+}
+  }
+@media (max-width: 570px)  { 
+  /*Nav*/
+  .js-change a img{
+float: left;
+
+}
+
+.js-change div ul{
+padding-right: 0px;
+} 
+
+}
+/*// Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { 
+  /*Nav*/
+  .js-change a img{
+float: left;
+
+}
+
+.js-change div ul{
+padding-right: 0px;
+} 
+}
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+  /*Nav*/
+  .js-change a img{
+float: left;
+
+}
+
+.js-change div ul{
+padding-right: 0px;
+} 
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+ /*Nav*/
+  .js-change a img{
+float: left;
+
+}
+
+.js-change div ul{
+padding-right: 0px;
+}
+    
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+ /*Nav*/
+  .js-change a img{
+float: left;
+
+}
+
+.js-change div ul{
+padding-right: 0px;
+}
+
+    
+}
+@media  (max-width: 1000px) {   
+
+  
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+  
+}

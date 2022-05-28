@@ -1,0 +1,197 @@
+@media (max-width: 570px)  { 
+	.header{
+        text-align: center;
+}
+
+.section2{
+        text-align: center;
+}
+.section2 img{
+    margin-bottom: 3rem;
+}
+.section3 img{
+        margin-bottom: 3rem;
+    }
+    .section3 h2{
+        text-align: center;
+}
+
+.header-about h2{
+        font-size: 2rem;
+}
+
+
+.section3-services img{
+        margin-bottom: 1rem !important;
+        margin: auto;
+        }    
+
+
+     .section3-content img{
+        margin: auto !important;
+        margin-bottom: 1rem !important;
+     }
+
+     .section3-content h3{
+        margin: auto !important;
+        padding-left: 0 !important;
+     }
+
+     .section3-services p {
+             text-align: center !important;
+     }
+
+     .section3-paddingBottom{
+        margin-bottom: 3rem !important;
+}
+.section3-card{
+        
+        margin: 0;
+      }
+}
+/*// Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { 
+	.header{
+        text-align: center;
+}
+
+.section2{
+        text-align: center;
+}
+.section2 img{
+    margin-bottom: 3rem;
+}
+.section3 img{
+        margin-bottom: 3rem;
+    }
+
+    .section3 h2{
+        text-align: center;
+}
+
+.section4 h2{
+        text-align: center;
+}
+
+.section2-about h2{
+        margin-bottom: 3rem;
+    }
+    .header-about h2{
+            font-size: 2rem;
+    }
+
+    
+    .section3-services img{
+        margin-bottom: 1rem !important;
+        margin: auto;
+        }    
+
+
+     .section3-content img{
+        margin: auto !important;
+        margin-bottom: 1rem !important;
+     }
+
+     .section3-content h3{
+        margin: auto !important;
+        padding-left: 0 !important;
+     }
+
+     .section3-services p {
+             text-align: center !important;
+     }
+
+     .section3-paddingBottom{
+        margin-bottom: 3rem !important;
+}
+.section3-card{
+        
+        margin: 0;
+      }
+     
+}
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+	.header{
+            text-align: center;
+    }
+
+    .section2{
+            text-align: center;
+    }
+    .section2 img{
+        margin-bottom: 3rem;
+    }
+
+    .section3 img{
+        margin-bottom: 3rem;
+    }
+
+    .section3 h2{
+            text-align: center;
+    }
+
+    .section2-about h2{
+        margin-bottom: 3rem;
+    }
+
+    .section3-services img{
+        margin-bottom: 1rem !important;
+        margin: auto;
+        }    
+
+      
+
+     .section3-content img{
+        margin: auto !important;
+        margin-bottom: 1rem !important;
+     }
+
+     .section3-content h3{
+        margin: auto !important;
+        padding-left: 0 !important;
+     }
+
+     .section3-services p {
+             text-align: center !important;
+     }
+
+     .section3-paddingBottom{
+        margin-bottom: 3rem !important;
+}
+
+.section3-card{
+        
+        margin: 0;
+      }
+
+      
+ 
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+.header .heading1{
+    font-size: 3rem;
+}
+
+
+
+
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) { 	
+	
+		
+}
+@media  (max-width: 1000px) { 	
+
+	
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+	
+}

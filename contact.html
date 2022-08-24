@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <title>Goliath - Contact</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/nav-styles.css"> 
+  <link rel="stylesheet" href="css/contactform.css">
+  <link rel="stylesheet" href="css/responsive.css"> 
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href="puzzle-captcha/slidercaptcha.css" rel="stylesheet"/>
+   
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md fixed-top navbar-dark js-change">
+    <a class="navbar-brand" href="index.html" ><img src="img/logo-w2.png" width="70%" alt="" ></a>
+    <button class="navbar-toggler" onclick="openNav()" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    
+    </button>
+
+
+
+    <div class="collapse navbar-collapse" id="navbarsExample04">
+       <ul class="navbar-nav z-navbar-nav ml-auto ">
+            <li class="nav-item z-nav-item ">
+              <a class="nav-link  "  href="index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item z-nav-item ">
+              <a href="about.html" class="nav-link " >About</a>
+            </li>
+            <li class="nav-item z-nav-item ">
+              <a href="services.html"  class="nav-link">Services</a>
+            </li>
+            <li class="nav-item z-nav-item active">
+              <a style="color: #fff;"  class="nav-link ">Contact Us</a>
+            </li>
+           
+          </ul>
+  
+    </div>
+  </nav>
+  
+  
+  <!-- CONTENT FOR MENU -->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a style="color: #0B3954;" >Contact Us</a>
+    </div>
+  </div>
+<!-- *************************************************************************
+HEADER - ABOUT
+********************************************************************************-->
+<section class="header-about contact-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <img class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms"  src="img/logo-w.png" alt="" srcset="" style="margin: auto;">
+          <h3 class="heading2 wow animate__animated animate__fadeInDown text-white " data-wow-delay="100ms">Contact Us</h3>
+        </div>
+   
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  
+<!-- *************************************************************************
+CONTACT
+********************************************************************************-->
+<section class="section section4 mb-5 pt-5">
+    <div class="container">
+    
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-6">
+                  <!-- contact form -->
+                  <div class="wow animated fadeInRight pt-5 pt-md-0" data-wow-delay=".2s">
+                    <form class="shake contact__form myForm" role="form" method="post" action="puzzle-captcha/contact.php" id="contactForm" name="contact-form" data-toggle="validator">
+                        <!-- Name -->
+                        <div class="form-group label-floating">
+                          <label class="control-label" for="name">Name</label>
+                          <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- email -->
+                        <div class="form-group label-floating">
+                          <label class="control-label" for="email">Email</label>
+                          <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                         <!-- Subject -->
+                        <div class="form-group label-floating">
+                          <label class="control-label">Subject</label>
+                          <input class="form-control" id="subject" type="text" name="subject" required data-error="Please enter your subject">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Message -->
+                        <div class="form-group label-floating">
+                            <label for="message" class="control-label">Message</label>
+                            <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        
+                                                 <!--VALIDATION Captcha Code-->
+                                                 <div class="captcha-val-set">
+                                                  <input type="hidden" name="captcha-val-set" value="">
+                                                 </div>
+                                                 <div class="slidercaptcha card">
+                                                  <div class="card-header">
+                                                  <span>Security Check</span>
+                                                  </div>
+                                                  <div class="card-body">
+                                                  <div id="captcha"></div>
+                                                  </div>
+                                                 </div>
+                                                 <button type="submit" class="myButton btn btn--gradient">Submit</button>
+
+                    </form>
+                </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 ">
+            <img src="img/logo.png" alt="" class="section-padding mx-auto wow animate__animated animate__fadeIn " data-wow-delay="100ms">
+            <div class="contact-p-container">
+             <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Contact us today to hire when you want and who you want. Our on-demand Project Managers and Human Resource experts are ready to speak with you!</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  <!-- *************************************************************************
+  FOOTER
+  ********************************************************************************-->
+  <footer class="footer ">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div  class=" mt-5 footer-link ">
+          <ul class="navbar-nav z-navbar-nav d-flex flex-row justify-content-center justify-content-sm-center justify-content-lg-end text-light">
+            <li class="nav-item z-nav-item "><a href="index.html" class="nav-link text-light">Home <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item z-nav-item "><a href="about.html" class="nav-link text-light scroll-link">About</a></li>
+            <li class="nav-item z-nav-item "><a href="services.html" class="nav-link text-light scroll-link" >Services</a></li>
+            <li class="nav-item z-nav-item "><a  class="nav-link text-light scroll-link">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <img src="img/logo-w2.png" alt="">
+      </div>
+      <div class="row d-flex justify-content-center"><p class="text-light pb-3">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Goliath. All Rights Reserved.</p></div>
+    </div>
+  </footer>
+  
+  
+  
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/main.js"></script>
+  <script src="puzzle-captcha/longbow.slidercaptcha.js"></script>
+<script src="puzzle-captcha/set-captcha-val.js"></script>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+  
+    
+    </script>
+  </body>
+  </html>

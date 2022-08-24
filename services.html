@@ -20,9 +20,9 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-md fixed-top navbar-light js-change">
-    <a class="navbar-brand"  href="index.html"><img src="img/logo.png" width="70%" alt="" class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms"></a>
-    <button class="navbar-toggler" onclick="openNav()" type="button"  aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-md fixed-top navbar-dark js-change">
+    <a class="navbar-brand" href="index.html"><img src="img/logo-w2.png" width="70%" alt="" ></a>
+    <button class="navbar-toggler" onclick="openNav()" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     
     </button>
@@ -32,18 +32,18 @@
     <div class="collapse navbar-collapse" id="navbarsExample04">
        <ul class="navbar-nav z-navbar-nav ml-auto ">
             <li class="nav-item z-nav-item ">
-              <a href="index.html" class="nav-link wow animate__animated animate__fadeInDown " data-wow-delay="100ms"
+              <a class="nav-link  "  href="index.html"
                 >Home <span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item z-nav-item ">
-              <a href="about.html" class="nav-link scroll-link wow animate__animated animate__fadeInDown " data-wow-delay="300ms">About</a>
+              <a href="about.html" class="nav-link " >About</a>
             </li>
             <li class="nav-item z-nav-item active">
-              <a href="services.html" class="nav-link scroll-link wow animate__animated animate__fadeInDown " data-wow-delay="500ms">Services</a>
+              <a  class="nav-link">Services</a>
             </li>
             <li class="nav-item z-nav-item">
-              <a style="color: #0B3954;" data-toggle="modal" data-target="#exampleModalCenter" class="nav-link scroll-link wow animate__animated animate__fadeInDown " data-wow-delay="700ms">Contact Us</a>
+              <a style="color: #fff;"  class="nav-link " href="contact.html">Contact Us</a>
             </li>
            
           </ul>
@@ -58,84 +58,8 @@
     <div class="overlay-content">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
-      <a href="services.html">Services</a>
-      <a style="color: #0B3954;" data-toggle="modal" data-target="#exampleModalCenter">Contact Us</a>
-    </div>
-  </div>
-
-  <!-- CONTACT FORM -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title heading3" id="exampleModalLongTitle">Goliath Operation Online</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          
-          <form class="shake contact__form" role="form" method="post" action="contact.php" id="contactForm" name="contact-form" data-toggle="validator">
-             <!-- form message -->
-                              <div class="row">
-                                  <div class="col-12">
-                                      <div class="contact__msg" style="display: none">
-                                          <p>Your message was sent successfully.</p>
-                                      </div>
-                                  </div>
-                              </div>
-            <!-- end message -->
-
-            <!-- Name -->
-            <div class="form-group label-floating">
-              <label class="control-label" for="name">Name</label>
-              <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
-              <div class="help-block with-errors"></div>
-            </div>
-            <!-- email -->
-            <div class="form-group label-floating">
-              <label class="control-label" for="email">Email</label>
-              <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
-              <div class="help-block with-errors"></div>
-            </div>
-            <!-- Subject -->
-            <div class="form-group label-floating">
-              <label class="control-label">Subject</label>
-              <input class="form-control" id="subject" type="text" name="subject" required data-error="Please enter your subject">
-              <div class="help-block with-errors"></div>
-            </div>
-            <!-- Message -->
-            <div class="form-group label-floating">
-                <label for="message" class="control-label">Message</label>
-                <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
-                <div class="help-block with-errors"></div>
-            </div>
-                         <!--VALIDATION Captcha Code-->
-
-<!--                          <div class="col-lg-6 pl-0">
-                          <div class="form-group mt-20 cstm-group">
-            
-                              <img class="img-fluid" src="verification.php/rand=<?php echo rand(); ?>" id="captcha_image" style="width:26%; border-radius:10px; height: 45px; ">
-                              <p style="line-height:1.4; font-size: 13px;margin-top:10px;margin-left:25px; color: #000;">Can't read the image? <br> <a href="javascript: refreshCaptcha();" style="color:#000;text-decoration: underline;">click here</a> to refresh</p>
-            
-                          </div>
-                      </div>
-                      <div class="col-lg-12 pl-0 pr-0">
-                        <div class="form-group mt-20" style="padding-top: 0px">
-                            <div class="comment-form__input-box" style="width:100%;">
-                                <input type="text" name="captchacode" placeholder="Security Check" id="validation-code" style="width: 100%;" class="form-control">
-                            </div>
-                        </div>
-                    </div> -->
-            <div class="modal-footer border-0">
-          <!-- Submit button -->
-            <button type="submit" class="btn btn--gradient hvr-fade mb-4 pl-5 pr-5">Send</button>
-        </div>
-        </form>
-       
-        </div>
-        
-      </div>
+      <a >Services</a>
+      <a style="color: #0B3954;" href="contact.html">Contact Us</a>
     </div>
   </div>
 
@@ -208,7 +132,7 @@ SECTION 3 - SERVICES
         </div>
       </div>
   
-      <div class="vertical-line"></div>
+
     </div>
   </section>
   
@@ -217,10 +141,10 @@ SECTION 3 - SERVICES
 <!-- *************************************************************************
 SECTION 4 - SERVICES
 ********************************************************************************-->
-<section class="section section3 section3-services">
+<section class="section section4 section3-services">
     <div class="container">
      <div class="text-center">   
-      <h2 class="heading2 mt-3 mb-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Project Management Services</h2>
+      <h2 class="heading2 mt-3  wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Project Management Services</h2>
     </div>
 
       <div class="row section-padding ">
@@ -261,7 +185,7 @@ SECTION 4 - SERVICES
         </div> -->
       </div>
   
-      <div class="vertical-line"></div>
+   
     </div>
   </section>
 
@@ -273,10 +197,10 @@ SECTION 4 - SERVICES
 <!-- *************************************************************************
 SECTION 5 - SERVICES
 ********************************************************************************-->
-<section class="section section3 section3-services">
+<section class="section section5 section3-services">
     <div class="container">
      <div class="text-center">   
-      <h2 class="heading2 mt-3 mb-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Why Do You Need a Professional Project Manager? </h2>
+      <h2 class="heading2 mt-3 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Why Do You Need a Professional Project Manager? </h2>
     </div>
 
       <div class="row section-padding ">
@@ -304,18 +228,17 @@ SECTION 5 - SERVICES
            
         </div>
       </div>
-  
-      <div class="vertical-line"></div>
+
     </div>
   </section> 
 
 <!-- *************************************************************************
 SECTION 6 - SERVICES
 ********************************************************************************-->
-<section class="section section3 section3-services">
+<section class="section section6 section3-services">
     <div class="container">
      <div class="text-center">   
-      <h2 class="heading2 mt-3 mb-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Project Scheduling from Start to Finish</h2>
+      <h2 class="heading2 mt-3  wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Project Scheduling from Start to Finish</h2>
      
     
     </div>
@@ -327,8 +250,8 @@ SECTION 6 - SERVICES
 
         <div class="col-12 col-md-12 col-lg-4 section3-paddingBottom">
             
-           <img src="img/confimation.png" width="25%" alt="" class="mt-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">
-           <h3 class="heading4 mt-3 wow animate__animated animate__fadeInDown mb-5 text-center" data-wow-delay="100ms">Confirm Project Activities</h3>
+           <img src="img/confimation.png" width="25%" alt="" class="mt-5 wow animate__animated animate__fadeInDown mx-auto" data-wow-delay="100ms">
+           <h3 class="heading4 mt-5 wow animate__animated animate__fadeInDown mb-1 text-center" data-wow-delay="100ms">Confirm Project Activities</h3>
             <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">We begin by assisting clients in comprehending the extent of the job. The project scope can assist organisations in their operations and provide a thorough action plan for the future. The project scope might also specify a series of actions and goals that must be met.</p>
             
             <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Throughout the process, our staff at Goliath is in close communication with stakeholders to ensure that the goals are met. 
@@ -338,8 +261,8 @@ SECTION 6 - SERVICES
 
         <div class="col-12 col-md-12 col-lg-4 section3-paddingBottom">
             
-            <img src="img/determined.png" width="25%" alt="" class="mt-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">
-            <h3 class="heading4 mt-3 wow animate__animated animate__fadeInDown mb-5 text-center" data-wow-delay="100ms">Determining Dependencies </h3>
+            <img src="img/determined.png" width="25%" alt="" class="mt-5 wow animate__animated animate__fadeInDown mx-auto" data-wow-delay="100ms">
+            <h3 class="heading4 mt-5 wow animate__animated animate__fadeInDown mb-1 text-center" data-wow-delay="100ms">Determining Dependencies </h3>
              <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">We establish dependencies during the project scheduling process and identify interrelated tasks. Identifying dependencies has saved valuable time for our clients and helped us finish projects on time or earlier than expected.</p>
              
          </div>
@@ -347,15 +270,15 @@ SECTION 6 - SERVICES
 
          <div class="col-12 col-md-12 col-lg-4 section3-paddingBottom">
             
-            <img src="img/set duration.png" width="25%" alt="" class="mt-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">
-            <h3 class="heading4 mt-3 wow animate__animated animate__fadeInDown mb-5 text-center" data-wow-delay="100ms">Set Duration</h3>
+            <img src="img/set duration.png" width="25%" alt="" class="mt-5 wow animate__animated animate__fadeInDown mx-auto" data-wow-delay="100ms">
+            <h3 class="heading4 mt-5 wow animate__animated animate__fadeInDown mb-1 text-center" data-wow-delay="100ms">Set Duration</h3>
              <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">We create a project schedule timeline with a well-defined start and end date. The timeline is set as per the client's expectations from us, and it paves a realistic plan for the future. The time allocated to each task is laid out for teams to follow so that monitoring and controlling can become more manageable.</p>
              
          </div>
 
       </div>
   
-      <div class="vertical-line"></div>
+
     </div>
   </section>
 
@@ -387,72 +310,16 @@ SECTION 6 - SERVICES
 <!-- *************************************************************************
 CONTACT
 ********************************************************************************-->
-<section class="section section4">
-    <div class="container">
-      <h2 class="heading2 mt-3 mb-5 wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Contact Us</h2>
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-6">
-                  <!-- contact form -->
-                  <div class="wow animated fadeInRight pt-5 pt-md-0" data-wow-delay=".2s">
-                    <form class="shake contact__form" role="form" method="post" action="contact.php" id="contactForm" name="contact-form" data-toggle="validator">
-                        <!-- Name -->
-                        <div class="form-group label-floating">
-                          <label class="control-label" for="name">Name</label>
-                          <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
-                          <div class="help-block with-errors"></div>
-                        </div>
-                        <!-- email -->
-                        <div class="form-group label-floating">
-                          <label class="control-label" for="email">Email</label>
-                          <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
-                          <div class="help-block with-errors"></div>
-                        </div>
-                         <!-- Subject -->
-                        <div class="form-group label-floating">
-                          <label class="control-label">Subject</label>
-                          <input class="form-control" id="subject" type="text" name="subject" required data-error="Please enter your subject">
-                          <div class="help-block with-errors"></div>
-                        </div>
-                        <!-- Message -->
-                        <div class="form-group label-floating">
-                            <label for="message" class="control-label">Message</label>
-                            <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                                                 <!--VALIDATION Captcha Code-->
-<!-- 
-                      <div class="col-lg-6 pl-0">
-                        <div class="form-group mt-20 cstm-group">
-          
-                            <img class="img-fluid" src="verification.php/rand=<?php echo rand(); ?>" id="captcha_image" style="width:26%; border-radius:10px; height: 45px; ">
-                            <p style="line-height:1.4; font-size: 13px;margin-top:10px;margin-left:25px; color: #000;">Can't read the image? <br> <a href="javascript: refreshCaptcha();" style="color:#000;text-decoration: underline;">click here</a> to refresh</p>
-          
-                        </div>
-                    </div>
-                    <div class="col-lg-12 pl-0 pr-0">
-                      <div class="form-group mt-20" style="padding-top: 0px">
-                          <div class="comment-form__input-box" style="width:100%;">
-                              <input type="text" name="captchacode" placeholder="Security Check" id="validation-code" style="width: 100%;" class="form-control">
-                          </div>
-                      </div>
-                  </div>
-                        <div class="form-submit mt-5">
-                            <button class="btn btn--gradient hvr-fade mt-3" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> Send Message</button>
-                            <div id="msgSubmit" class="h3 text-center hidden"></div>
-                            <div class="clearfix"></div>
-                        </div> -->
-                    </form>
-                </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6 ">
-            <img src="img/logo.png" alt="" class="section-padding mx-auto wow animate__animated animate__fadeIn " data-wow-delay="100ms">
-            <div class="contact-p-container">
-             <p class="wow animate__animated animate__fadeInDown " data-wow-delay="100ms">Contact us today for all your Project Management and HR needs</p>
-            </div>
-          </div>
-      </div>
+<section class="section contact-section">
+  <div class="container">
+    <div class="col-12 text-center">
+      <img src="img/logo-w2.png" class="mx-auto" alt="">
+      <p class="text-white">Contact us today to hire when you want and who you want. <br>Our on-demand project managers and human resource experts are ready to speak with you!</p>
+      <button class="btn btn--gradient hvr-fade mt-3 wow animate__animated animate__fadeInDown " onclick="location.href='contact.html'" type="button" ><span>Contact Us</span></button>
     </div>
-  </section>
+ 
+  </div>
+</section>
   
   
   
@@ -467,15 +334,15 @@ CONTACT
           <ul class="navbar-nav z-navbar-nav d-flex flex-row justify-content-center justify-content-sm-center justify-content-lg-end text-light">
             <li class="nav-item z-nav-item "><a href="index.html" class="nav-link text-light">Home <span class="sr-only">(current)</span></a></li>
             <li class="nav-item z-nav-item "><a href="about.html" class="nav-link text-light scroll-link">About</a></li>
-            <li class="nav-item z-nav-item "><a href="services.html" class="nav-link text-light scroll-link" >Services</a></li>
-            <li class="nav-item z-nav-item "><a  class="nav-link text-light scroll-link" data-toggle="modal" data-target="#exampleModalCenter">Contact Us</a></li>
+            <li class="nav-item z-nav-item "><a  class="nav-link text-light scroll-link" >Services</a></li>
+            <li class="nav-item z-nav-item "><a  class="nav-link text-light scroll-link" href="contact.html">Contact Us</a></li>
           </ul>
         </div>
       </div>
       <div class="row d-flex justify-content-center">
         <img src="img/logo-w2.png" alt="">
       </div>
-      <div class="row d-flex justify-content-center"><p class="text-light pb-3">Copyright 2022. All Rights Reserved</p></div>
+      <div class="row d-flex justify-content-center"><p class="text-light pb-3">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Goliath. All Rights Reserved.</p></div>
     </div>
   </footer>
   

@@ -2,13 +2,21 @@
 /* W3SCHOLL NAV STYLE */
 
 .onscroll-bg{
-  background-color: var(--white) !important; /*change your desire bg color on onscroll*/
+  background-color: var(--prussianBlue) !important; /*change your desire bg color on onscroll*/
   transition: all 0.5s ease;
 }
 
 .transition{
   transition: all 0.9s ease;
 
+}
+
+nav {
+  background-color: var(--prussianBlue);
+}
+
+nav button{
+ margin-right: 16px;
 }
 
 .js-change a img{

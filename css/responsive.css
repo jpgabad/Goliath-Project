@@ -108,6 +108,12 @@
         
         margin: 0;
       }
+
+      .section-padding {
+        padding-top: 0rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
      
 }
 
@@ -166,6 +172,12 @@
         margin: 0;
       }
 
+      .section-padding {
+        padding-top: 0rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+
       
  
 }
@@ -176,6 +188,10 @@
     font-size: 3rem;
 }
 
+.section-padding {
+        padding-top: 0rem !important;
+        padding-bottom: 2rem !important;
+    }
 
 
 

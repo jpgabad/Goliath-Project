@@ -78,7 +78,9 @@ select {
 /*
 	8. Avoid text overflows
   */
-p,
+p{
+  line-height: 1.5rem;
+}
 h1,
 h2,
 h3,
@@ -92,7 +94,7 @@ h6 {
 p {
   font-family: var(--default-font);
   color: var(--prussianBlue);
-  line-height: 36px;
+  line-height: 1.5rem;
   font-weight: 400;
   
 }
@@ -106,27 +108,30 @@ p {
 }
 
 a:link {
-  color: var(--prussianBlue) !important;
+  color: var(--white) !important;
   cursor: pointer;
 }
 a:hover {
-  color: var(--prussianBlue) !important;
+  color: var(--white) !important;
+  cursor: pointer;
 }
 a:visited {
-  color: var(--prussianBlue) !important;
+  color: var(--white) !important;
+  cursor: pointer;
   /*text-decoration: underline;
 	cursor: auto;*/
 }
 a:link:active {
   /*text-decoration: underline;*/ /*
 		color: (internal value);*/
-    color: var(--prussianBlue) !important;
+    color: var(--white) !important;
+    cursor: pointer;
 }
 a:visited:active {
   /*	color: (internal value);
   
 */
-color: var(--prussianBlue) !important;
+color: var(--white) !important;
 }
 
 /* CUSTOM STYLES */
@@ -251,11 +256,18 @@ color: var(--prussianBlue) !important;
 .header p{
   font-weight: 700;
   font-size: 1.3rem;
-  line-height: 3rem;
+  line-height: 1.5rem;
 }
 
 .header img{
   padding-top: 200px;
+}
+
+.org1{
+  position: absolute;
+  left: -271px;
+  bottom: -126px;
+  z-index: -100;
 }
 
 
@@ -263,6 +275,7 @@ color: var(--prussianBlue) !important;
 /* SECTION 2 */
 .section2{
   
+  min-height: 315px !important;
 }
 
 .section2 img{
@@ -277,7 +290,56 @@ color: var(--prussianBlue) !important;
 /* SECTION 3 */
 
 .section3{
-  
+  background-image: url("../img/section3.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+ 
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  padding-bottom: 0rem !important;
+}
+
+
+
+.section4{
+  background-image: url("../img/section4.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+ 
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+
+
+.section5{
+  background-image: url("../img/section5.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+ 
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+
+.section6{
+  background-image: url("../img/section6.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+ 
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.contact-section{
+  background: rgb(8,126,139);
+background: linear-gradient(121deg, rgba(8,126,139,1) 0%, rgba(11,57,84,1) 100%);
 }
 
 .section3 img{
@@ -346,9 +408,34 @@ color: var(--prussianBlue) !important;
 
 /* ABOUT */
 .header-about {
+
+  background-image: url("../img/header-about.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+ 
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+
   padding-top: 200px;
   min-height: 500px;
 
+}
+
+
+.contact-header{
+  background-image: url("../img/contact-bg.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+ 
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+
+  padding-top: 200px;
+  min-height: 500px;
 }
 
 
@@ -356,6 +443,36 @@ color: var(--prussianBlue) !important;
   min-height: 100px;
 }
 
+.about-section3{
+  background-image: url("../img/section3.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+ 
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  padding-bottom: 0rem !important;
+}
+
+.about-section4{
+  background-image: url("../img/section4.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+ 
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  padding-bottom: 0rem !important;
+}
+
+
+.about-section5{
+  background-image: url("../img/section5.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+ 
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  padding-bottom: 0rem !important;
+}
 
 
 

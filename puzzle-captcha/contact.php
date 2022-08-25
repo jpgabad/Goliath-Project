@@ -24,7 +24,7 @@ else
 if ( isset($_SESSION['captcha']))
 if ($_SESSION['captcha']){
         // Recipient
-        $toEmail = 'contact@onus.com';
+        $toEmail = 'jpgisprogrammer@gmail.com';
 
         // Sender
         $from = $email;

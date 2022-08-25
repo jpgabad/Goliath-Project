@@ -89,6 +89,7 @@ h5,
 h6 {
   overflow-wrap: break-word;
   color: var(--prussianBlue);
+  text-transform: uppercase;
 }
 
 p {
